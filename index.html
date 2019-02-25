@@ -60,13 +60,89 @@
         <section>
             <section class="center">
                 <h2 class="heading-overview">Syntax</h2>
-                <small></small>
+                <small>Grundlagen</small>
+            </section>
+            <section>
+                <h3>Aufbau eines Programms</h3>
+                <ul>
+                    <li>Skriptsprache: simpler Aufbau</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Grundrechenarten</h3>
+                <pre><code data-trim data-noescape class="python">
+                        print('1 +  2', '=', 1 + 2)
+                        print('1 -  2', '=', 1 - 2)
+                        print('1 *  2', '=', 1 * 2)
+                        print('1 /  2', '=', 1 / 2)
+                        print('1 // 2', '=', 1 // 2)
+                        print('2 ** 2', '=', 2 ** 2)
+                        print('3 %  2', '=', 1 % 2)
+                        print('4 %  2', '=', 2 % 2)
+                    </code></pre>
+            </section>
+            <section>
+                <h3>Boolsche Algebra</h3>
+                <pre><code data-trim data-noescape class="python">
+                    print('1 <  2', 1 < 2)
+                    print('1 >  2', 1 > 2)
+                    print('1 == 2', 1 == 2)
+                    print('2 == 2', 2 == 2)
+                    print('2 != 2', 2 != 2)
+                    print('True and True', True and True)
+                    print('False or False', False or False)
+                    print('not False', not False)
+                </code></pre>
+            </section>
+            <section>
+                <h3>Strings</h3>
+                <pre><code data-trim data-noescape class="python">
+                    print("Hello World!")
+                    print('Hello World!')
+
+                    h, w = 'Hello', 'World'
+                    print(f'{h} {w}!')
+                </code></pre>
+            </section>
+            <section>
+                <h3>Schleifen</h3>
+                <pre><code data-trim data-noescape class="python">
+                        for i in range(10):
+                            print(i)
+                        print('\n')
+
+                        i = 0
+                        while True:
+                            print(i)
+                            i += 1
+                            break
+                </code></pre>
+            </section>
+            <section>
+                <h3>Funktionen</h3>
+                <pre><code data-trim data-noescape class="python">
+                        def myFunction(param):
+                            myFunctionRecursive = myFunction
+                            return myFunctionRecursive(param)
+                </code></pre>
             </section>
         </section>
         <section>
             <section class="center">
                 <h2 class="heading-overview">Features</h2>
-                <small></small>
+                <small>Syntactic sugar</small>
+            </section>
+            <section>
+                <h3>Listen, Tupel</h3>
+                <pre><code data-trim data-noescape class="python">
+                        c = (1, 2)
+                        (cx, cy) = c
+                        print(cx, cy)
+
+                        c = [3, 4, 5, 6, 7]
+                        (cx, _, cy, *_) = c
+                        print(cx, cy)
+                </code></pre>
             </section>
         </section>
         <section>
