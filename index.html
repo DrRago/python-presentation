@@ -35,8 +35,44 @@
         <section class="no-heading-overview table-of-contents" data-heading-tag="h2" data-heading="Inhalt"></section>
         <section>
             <section class="center">
-                <h2 class="heading-overview">About us</h2>
-                <small>What do we do?</small>
+                <h2 class="heading-overview">Allgemeines</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Geschichte</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Syntax</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Features</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Anwendungsbeispiel</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Zweck</h2>
+                <small></small>
+            </section>
+        </section>
+        <section>
+            <section class="center">
+                <h2 class="heading-overview">Vergleich</h2>
+                <small></small>
             </section>
         </section>
     </div>
@@ -154,27 +190,27 @@
             // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
             {
                 src: 'lib/js/classList.js', condition: function () {
-                return !document.body.classList;
-            }
+                    return !document.body.classList;
+                }
             },
 
             // Interpret Markdown in <section> elements
             {
                 src: 'plugin/markdown/marked.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
+                    return !!document.querySelector('[data-markdown]');
+                }
             },
             {
                 src: 'plugin/markdown/markdown.js', condition: function () {
-                return !!document.querySelector('[data-markdown]');
-            }
+                    return !!document.querySelector('[data-markdown]');
+                }
             },
 
             // Syntax highlight for <code> elements
             {
                 src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
+                    hljs.initHighlightingOnLoad();
+                }
             },
 
             // Zoom in and out with Alt+click
