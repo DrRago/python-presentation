@@ -12,4 +12,3 @@
 
 - **Vergleich zu Java**
 - **(Vergleich zu JavaScript)**
-- 
