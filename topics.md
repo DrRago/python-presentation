@@ -1,14 +1,14 @@
-- *Allgemeies*
+- **Allgemeies**
     - Name
     - Was für eine Programmiersprache ist Python
-- *Geschichte*
-- *Syntax*
-- *Features*
+- **Geschichte**
+- **Syntax**
+- **Features**
 
-- *Anwendungsbeispiel*
+- **Anwendungsbeispiel**
     - Primfaktorzerlegung
 
-- *Zweck*
+- **Zweck**
 
-- *Vergleich zu Java*
-- *(Vergleich zu JavaScript)*
+- **Vergleich zu Java**
+- **(Vergleich zu JavaScript)**
