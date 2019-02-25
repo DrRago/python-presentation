@@ -74,6 +74,30 @@
                 <h2 class="heading-overview">Anwendungsbeispiel</h2>
                 <small></small>
             </section>
+            <section>
+                	<pre><code data-trim data-noescape class="python">
+
+def det_2x2(m):
+  return m[0][0] * m[1][1] - m[0][1] * m[1][0]
+
+def det(m):
+<mark>from numpy import asarray, delete</mark>
+  m = asarray(m);
+  if (m.shape[0] == 2):
+    return det_2x2(m)
+
+  det_sum = 0
+  for i in range(len(m)):
+    new = m[1:]
+    new = delete(new, i, 1)
+    det_sum += m[0, i] * det(new)
+
+  return det_sum
+
+mat = [[1,0,-1],[-8,4,1],[-2,1,0]]
+print(det(mat))
+	</code></pre>
+            </section>
         </section>
         <section>
             <section class="center">
