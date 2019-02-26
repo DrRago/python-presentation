@@ -118,6 +118,39 @@ while True:
     break
                 </code></pre>
             </section>
+            <section>
+                <h3>Klassen</h3>
+                <pre><code data-trim data-noescape class="python">
+def typename(x):
+  return f'{x.__class__.__name__}'
+
+class Object:
+  def __str__(self):
+    return typename(self)
+
+class Wrapper(Object):
+  def __init__(self, o, *args, **kwargs):
+    super().__init__(*args, **kwargs)
+    self.o = o
+
+o = Object()
+w = Wrapper(3)
+
+print(o)
+print(w)
+print(w.o - 3, end='\n')
+
+Object.__str__ = lambda self: 'lul'
+
+print(o)
+print(w, end='\n')
+
+Wrapper.__str__ = typename
+
+print(o)
+print(w)
+                </code></pre>
+            </section>
         </section>
         <section>
             <section class="center">
