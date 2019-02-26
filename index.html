@@ -71,51 +71,51 @@
             <section>
                 <h3>Grundrechenarten</h3>
                 <pre><code data-trim data-noescape class="python">
-                        print('1 +  2', '=', 1 + 2)
-                        print('1 -  2', '=', 1 - 2)
-                        print('1 *  2', '=', 1 * 2)
-                        print('1 /  2', '=', 1 / 2)
-                        print('1 // 2', '=', 1 // 2)
-                        print('2 ** 2', '=', 2 ** 2)
-                        print('3 %  2', '=', 1 % 2)
-                        print('4 %  2', '=', 2 % 2)
+print('1 +  2 =', 1 + 2)
+print('1 -  2 =', 1 - 2)
+print('1 *  2 =', 1 * 2)
+print('1 /  2 =', 1 / 2)
+print('1 // 2 =', 1 // 2)
+print('2 ** 2 =', 2 ** 2)
+print('3 %  2 =', 3 % 2)
+print('4 %  2 =', 4 % 2)
                 </code></pre>
             </section>
             <section>
                 <h3>Boolsche Algebra</h3>
                 <pre><code data-trim data-noescape class="python">
-                    print('1 <  2', 1 < 2)
-                    print('1 >  2', 1 > 2)
-                    print('1 == 2', 1 == 2)
-                    print('2 == 2', 2 == 2)
-                    print('2 != 2', 2 != 2)
-                    print('True and True', True and True)
-                    print('False or False', False or False)
-                    print('not False', not False)
+print('1 <  2 \t\t=', 1 < 2)
+print('1 >  2 \t\t=', 1 > 2)
+print('1 == 2 \t\t=', 1 == 2)
+print('2 == 2 \t\t=', 2 == 2)
+print('2 != 2 \t\t=', 2 != 2)
+print('True and True \t=', True and True)
+print('False or False \t=', False or False)
+print('not False \t=', not False)
                 </code></pre>
             </section>
             <section>
                 <h3>Strings</h3>
                 <pre><code data-trim data-noescape class="python">
-                    print("Hello World!")
-                    print('Hello World!')
+print("Hello World!")
+print('Hello World!')
 
-                    h, w = 'Hello', 'World'
-                    print(f'{h} {w}!')
+h, w = 'Hello', 'World'
+print(f'{h} {w}!')
                 </code></pre>
             </section>
             <section>
                 <h3>Schleifen</h3>
                 <pre><code data-trim data-noescape class="python">
-                        for i in range(10):
-                            print(i)
-                        print('\n')
+for i in range(10):
+    print(i)
+print('\n')
 
-                        i = 0
-                        while True:
-                            print(i)
-                            i += 1
-                            break
+i = 0
+while True:
+    print(i)
+    i += 1
+    break
                 </code></pre>
             </section>
         </section>
@@ -127,52 +127,52 @@
             <section>
                 <h3>Listen, Tupel</h3>
                 <pre><code data-trim data-noescape class="python">
-                        c = (1, 2)
-                        (cx, cy) = c
-                        print(cx, cy)
+c = (1, 2)
+(cx, cy) = c
+print(cx, cy)
 
-                        c = [3, 4, 5, 6, 7]
-                        (cx, _, cy, *_) = c
-                        print(cx, cy)
+c = [3, 4, 5, 6, 7]
+(cx, _, cy, *_) = c
+print(cx, cy)
                 </code></pre>
             </section>
             <section>
                 <h4>Funktionsparameter</h4>
                 <pre><code data-trim data-noescape class="python">
-                        def print_keys(*keys, **d):
-                            for key in keys:
-                                value = d.get(key, "key doesn't exist")
-                                print(key, ':', value)
+def print_keys(*keys, **d):
+    for key in keys:
+        value = d.get(key, "key doesn't exist")
+        print(key, ':', value)
 
-                        test = {
-                            '1': 1,
-                            '2': 'cool',
-                            '5': 3,
-                            '6': 2,
-                        }
+test = {
+    '1': 1,
+    '2': 'cool',
+    '5': 3,
+    '6': 2,
+}
 
-                        print_keys('1', '4', '5', '2', **test)
-                        print_keys(*map(str, range(1, 6)), **test)
+print_keys('1', '4', '5', '2', **test)
+print_keys(*map(str, range(1, 6)), **test)
                 </code></pre>
             </section>
             <section>
                 <h4>Generatoren</h4>
                 <pre><code data-trim data-noescape class="python">
-                        def fizz_buzz(x):
-                          rules = {
-                              2: 'fizz',
-                              5: 'buzz'
-                          }
+def fizz_buzz(x):
+  rules = {
+      2: 'fizz',
+      5: 'buzz'
+  }
 
-                          items = [rules.get(key, x) for key in rules.keys() if not x % key]
+  items = [rules.get(key, x) for key in rules.keys() if not x % key]
 
-                          if items:
-                            yield from items
-                          else:
-                            yield x
+  if items:
+    yield from items
+  else:
+    yield x
 
-                        for i in (fizz_buzz(x + 1) for x in range(0, 20)):
-                          print(*i)
+for i in (fizz_buzz(x + 1) for x in range(0, 20)):
+  print(*i)
                 </code></pre>
             </section>
         </section>
