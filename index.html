@@ -79,7 +79,7 @@
                         print('2 ** 2', '=', 2 ** 2)
                         print('3 %  2', '=', 1 % 2)
                         print('4 %  2', '=', 2 % 2)
-                    </code></pre>
+                </code></pre>
             </section>
             <section>
                 <h3>Boolsche Algebra</h3>
@@ -118,14 +118,6 @@
                             break
                 </code></pre>
             </section>
-            <section>
-                <h3>Funktionen</h3>
-                <pre><code data-trim data-noescape class="python">
-                        def myFunction(param):
-                            myFunctionRecursive = myFunction
-                            return myFunctionRecursive(param)
-                </code></pre>
-            </section>
         </section>
         <section>
             <section class="center">
@@ -142,6 +134,45 @@
                         c = [3, 4, 5, 6, 7]
                         (cx, _, cy, *_) = c
                         print(cx, cy)
+                </code></pre>
+            </section>
+            <section>
+                <h4>Funktionsparameter</h4>
+                <pre><code data-trim data-noescape class="python">
+                        def print_keys(*keys, **d):
+                            for key in keys:
+                                value = d.get(key, "key doesn't exist")
+                                print(key, ':', value)
+
+                        test = {
+                            '1': 1,
+                            '2': 'cool',
+                            '5': 3,
+                            '6': 2,
+                        }
+
+                        print_keys('1', '4', '5', '2', **test)
+                        print_keys(*map(str, range(1, 6)), **test)
+                </code></pre>
+            </section>
+            <section>
+                <h4>Generatoren</h4>
+                <pre><code data-trim data-noescape class="python">
+                        def fizz_buzz(x):
+                          rules = {
+                              2: 'fizz',
+                              5: 'buzz'
+                          }
+
+                          items = [rules.get(key, x) for key in rules.keys() if not x % key]
+
+                          if items:
+                            yield from items
+                          else:
+                            yield x
+
+                        for i in (fizz_buzz(x + 1) for x in range(0, 20)):
+                          print(*i)
                 </code></pre>
             </section>
         </section>
@@ -188,6 +219,7 @@ print(l)
 <script src="js/reveal.js"></script>
 
 <script>
+
     Reveal.initialize({
         // Display controls in the bottom right corner
         controls: false,
@@ -291,6 +323,19 @@ print(l)
 
         // The display mode that will be used to show slides
         display: 'block',
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: "90%",
+        height: "90%",
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.1,
+        maxScale: 1.0,
 
         dependencies: [
             // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
