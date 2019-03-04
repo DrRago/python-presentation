@@ -36,7 +36,7 @@
         <section>
             <section class="center">
                 <h2 class="heading-overview">Allgemeines</h2>
-                <small>Was is Python?</small>
+                <small>Was ist Python?</small>
             </section>
             <section class="center">
                 <h3>Ansprüche</h3>
@@ -61,7 +61,7 @@
                 <h3>Python 2</h3>
                 <ul>
                     <li>
-                        Warum ist es noch aktuell?
+                        warum ist es noch aktuell?
                         <ul>
                             <li class="fragment">große Syntax- & Funktionsunterschiede</li>
                         </ul>
@@ -80,7 +80,7 @@
                 <ul>
                     <li>konzipiert ende 1980 von u.a. Guide van Rossum</li>
                     <li>nachfolger der Sprache <i>ABC</i></li>
-                    <li>Entwickelt für <i>Amoeba</i></li>
+                    <li>entwickelt für <i>Amoeba</i></li>
                     <li class="fragment">Name von <i>Monty Python</i></li>
                 </ul>
             </section>
@@ -239,10 +239,10 @@ for i in (fizz_buzz(x + 1) for x in range(0, 20)):
             <section>
                 	<pre><code data-trim data-noescape class="python">
 def factorisation(n, fac=2):
-    if (n < fac * fac):
+    if (n < fac * fac):  # prime factor must be at least the sqrt of n
         l.append(n)
         return
-    if (n % fac == 0):
+    if (n % fac == 0):  # the factor divides the number
         l.append(fac)
         factorisation(n // fac, fac)
     else:
@@ -297,6 +297,10 @@ print(l)
                 </ul>
             </section>
         </section>
+        <section class="no-heading-overview">
+            <h3>Vielen Dank für Ihre Aufmerksamkeit</h3>
+            <h5>Haben Sie noch Fragen?</h5>
+        </section>
     </div>
 </div>
 
@@ -316,7 +320,7 @@ print(l)
         defaultTiming: 120,
 
         // Display the page number of the current slide
-        slideNumber: true,
+        slideNumber: false,
 
         // Push each slide change to the browser history
         history: false,
